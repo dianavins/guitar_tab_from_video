@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda *)",
+      "PowerShell(conda run *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(conda env *)",
+      "Bash(/c/Program Files/MuseScore 4/bin/MuseScore4.exe *)",
+      "Bash(\"/c/Program Files/MuseScore 4/bin/MuseScore4.exe\" -o \"C:/Users/diana/guitar_tab_from_video/4_tab_creation/tabs/_preview.png\" \"C:/Users/diana/guitar_tab_from_video/4_tab_creation/tabs/jigsaw_fingerstyle.musicxml\")"
+    ]
+  }
+}

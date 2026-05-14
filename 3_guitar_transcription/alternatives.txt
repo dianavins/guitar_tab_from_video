@@ -1,0 +1,14 @@
+ Strong alternatives
+
+  - MT3 / hFT-Transformer — Higher accuracy than Basic Pitch on dense polyphony, but heavier setup (TF +
+  checkpoints, GPU strongly preferred). Overkill for 1–3-note fingerstyle.
+
+  MIDI → music21 (set tuning, clean up timing) → MusicXML → MuseScore CLI → PDF + tab
+
+  B. Custom DP fingering optimizer + MusicXML (most accurate)
+  For each note/chord, enumerate candidate (string, fret) within range; build a trellis where edge cost =
+  fret-distance + finger-span + string-jump penalty; run Viterbi. Emit MusicXML with explicit
+  <technical><string/><fret/></technical> so MuseScore renders your fingering, not its own. This is the
+  well-studied approach (Tuohy & Potter 2006, Radicioni & Lombardo). Best for fingerstyle since polyphony is sparse
+   (1–3 simultaneous notes per the CSV). ~200–400 lines but very satisfying and the output actually reflects how a
+  guitarist would play it.

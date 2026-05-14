@@ -1,0 +1,13 @@
+name: guitar-tab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - ffmpeg
+  - ffmpeg-python
+  - pip
+  - pip:
+      - demucs
+      - torchcodec
+      - basic-pitch[onnx]
+      - music21
